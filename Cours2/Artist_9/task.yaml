@@ -1,0 +1,110 @@
+accessible: true
+author: Celine Deknop
+context: Dessin libre ! Tu peux appuyer sur le bouton vert pour regarder le résultat
+    et soumettre la tâche pour sauvegarder tes dessins.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: Exercice 9
+network_grading: false
+order: 0
+problems:
+    code:
+        options:
+            scrollbars: true
+            visual:
+                position: left
+            oneBasedIndex: true
+            media: /static/common/js/blockly/media/
+            toolboxPosition: start
+            css: true
+            trashcan: true
+            sounds: true
+            maxBlocks: '45'
+        files:
+        - turtle.js
+        - interpreter.js
+        type: blockly
+        blocks_files:
+        - blocks.js
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+            </xml>
+        name: ''
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <category name="mouvement" colour="150">
+              <variables></variables>
+              <block type="turtle_move">
+                <field name="DIR">moveForward</field>
+                <value name="VALUE">
+                  <block type="math_number">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+              <block type="turtle_turn_internal">
+                <field name="DIR">turnRight</field>
+                <field name="VALUE">90</field>
+              </block>
+              <block type="turtle_turn_internal">
+                <field name="DIR">turnLeft</field>
+                <field name="VALUE">90</field>
+              </block>
+            </category>
+               <category name="couleur" colour="0">
+              <variables></variables>
+              <block type="turtle_colour">
+                <value name="COLOUR">
+                  <block type="colour_random"></block>
+                </value>
+              </block>
+              <block type="turtle_colour_internal">
+                <field name="COLOUR">#228b22</field>
+              </block>
+            </category>
+              <category name="boucle" colour="120">
+              <variables></variables>
+              <block type="controls_repeat">
+                <field name="TIMES">???</field>
+              </block>
+            </category>
+            </xml>
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        type: 2
+        name: Facile
+        description: Faisant partie du parcours facile
+        visible: false
+        id: ''
+    '1':
+        description: Faisant partie du parcours challenge
+        type: 2
+        name: Challenge
+        visible: false
+        id: ''
+    '2':
+        description: Faisant partie du parcours normal
+        name: Normal
+        type: 2
+        visible: false
+        id: ''
+    '3':
+        visible: true
+        name: Lecon5
+        description: ''
+        type: 2
+        id: ''
+weight: 1.0
