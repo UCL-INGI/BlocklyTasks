@@ -1,0 +1,106 @@
+accessible: true
+author: Florian Thuin
+context: |-
+    .. container:: row
+
+        .. container:: col-xs-8 col-md-9 text-justify
+
+            Utilise le bloc
+
+                .. image:: 01_maze/bloc_avancer.png
+                    :height: 30px
+
+            pour faire avancer le zombie d'un pas.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: Exercice 1
+network_grading: false
+order: 0
+problems:
+    code:
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="maze_moveForward"></block>
+              <block type="maze_turn">
+                <field name="DIR">turnLeft</field>
+              </block>
+              <block type="maze_turn">
+                <field name="DIR">turnRight</field>
+              </block>
+            </xml>
+        options:
+            scrollbars: true
+            visual:
+                position: left
+            oneBasedIndex: true
+            media: /static/common/js/blockly/media/
+            css: true
+            trashcan: true
+            toolboxPosition: start
+            sounds: true
+            maxBlocks: '4'
+        files:
+        - maze.js
+        - interpreter.js
+        type: blockly
+        name: ''
+        blocks_files:
+        - blocks.js
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <block type="maze_moveForward"></block>
+            </xml>
+        header: |-
+            .. image:: 01_maze/maze/small_static_avatar.png
+                :height: 40px
+
+            **Chère personne. Moi zombie. Devoir... atteindre... tournesol.**
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        type: 0
+        name: Base
+        id: '1'
+        description: Introduit un concept de base
+        visible: false
+    '1':
+        id: '2'
+        description: Demande de créer une séquence d'instruction
+        type: 0
+        name: Séquence
+        visible: false
+    '3':
+        name: Normal
+        visible: true
+        description: Fait partie du parcours normal
+        type: 2
+        id: ''
+    '4':
+        type: 2
+        description: Fait partie du parcours challenge
+        name: Challenge
+        visible: true
+        id: ''
+    '5':
+        visible: true
+        description: Fait partie du parcours pour élèves en difficulté
+        name: Facile
+        type: 2
+        id: ''
+    '6':
+        description: ''
+        name: Lecon 2
+        type: 2
+        visible: true
+        id: ''
+weight: 1.0

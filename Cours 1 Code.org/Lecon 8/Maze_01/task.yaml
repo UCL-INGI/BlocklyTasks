@@ -1,0 +1,87 @@
+accessible: true
+author: Florian Thuin
+context: Utilise le bloc « Répéter jusqu'à » pour amener le zombie au tournesol.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    memory: '100'
+    time: '30'
+name: Exercice 1
+network_grading: false
+order: 0
+problems:
+    code:
+        options:
+            scrollbars: true
+            visual:
+                position: left
+            oneBasedIndex: true
+            media: /static/common/js/blockly/media/
+            toolboxPosition: start
+            css: true
+            sounds: true
+            trashcan: true
+            maxBlocks: '2'
+        files:
+        - maze.js
+        - interpreter.js
+        type: blockly
+        name: ''
+        blocks_files:
+        - blocks.js
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+            </xml>
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="maze_moveForward"></block>
+              <block type="maze_turn">
+                <field name="DIR">turnLeft</field>
+              </block>
+              <block type="maze_turn">
+                <field name="DIR">turnRight</field>
+              </block>
+              <block type="maze_forever"></block>
+            </xml>
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '4':
+        type: 0
+        description: ''
+        name: Boucle "répéter jusqu'à"
+        visible: true
+        id: '1'
+    '0':
+        type: 2
+        visible: true
+        name: Lecon 8
+        description: ''
+        id: ''
+    '1':
+        description: ''
+        type: 2
+        name: Facile
+        visible: false
+        id: ''
+    '2':
+        description: ''
+        name: Normal
+        type: 2
+        visible: false
+        id: ''
+    '3':
+        name: Challenge
+        description: ''
+        type: 2
+        visible: false
+        id: ''
+weight: 1.0

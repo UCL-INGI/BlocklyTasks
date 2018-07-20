@@ -1,0 +1,94 @@
+accessible: true
+author: Florian Thuin
+context: |-
+    .. image:: 01_maze/maze/small_static_avatar.png
+        :height: 40px
+
+    **Utilise le bloc « Répéter » pour amener le zombie au tournesol. (Évite les plantes carnivores!)**
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: Exercice 7
+network_grading: false
+order: 7
+problems:
+    code:
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+                <block type="maze_moveForward"></block>
+              <block type="maze_turn"><field name="DIR">turnLeft</field></block>
+              <block type="maze_turn"><field name="DIR">turnRight</field></block>
+              <block type="controls_repeat"><title name="TIMES">???</title></block>
+            </xml>
+        options:
+            zoom:
+                scaleSpeed: 1.2
+                controls: true
+                minScale: 0.3
+                maxScale: 3.0
+                startScale: 1.0
+                wheel: false
+            grid:
+                length: 3
+                spacing: 20
+                snap: true
+                colour: '#ccc'
+            scrollbars: true
+            visual:
+                position: left
+            oneBasedIndex: true
+            media: /static/common/js/blockly/media/
+            toolboxPosition: start
+            css: true
+            trashcan: true
+            sounds: true
+            maxBlocks: '14'
+        files:
+        - maze.js
+        - interpreter.js
+        type: blockly
+        blocks_files:
+        - blocks.js
+        workspace: <xml xmlns="http://www.w3.org/1999/xhtml" id="workspaceBlocks"
+            style="display:none"></xml>
+        name: ''
+        header: |-
+            .. image:: 01_maze/maze/small_static_avatar.png
+                :height: 40px
+
+            **Utilise le bloc « Répéter » pour amener le zombie au tournesol. (Évite les plantes carnivores!)**
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        visible: true
+        type: 0
+        name: Boucle X fois
+        id: '3'
+        description: utilise une boucle "répéter X fois"
+    '1':
+        id: '2'
+        description: Demande de créer une séquence d'instruction
+        type: 0
+        name: Séquence
+        visible: false
+    '3':
+        description: Fait partie du parcours pour élèves en difficulté
+        visible: true
+        name: Facile
+        type: 2
+        id: ''
+    '4':
+        type: 2
+        description: ''
+        name: Lecon 2
+        visible: true
+        id: ''
+weight: 1.0

@@ -1,0 +1,124 @@
+accessible: true
+author: Celine Deknop
+context: Maintenant, crée un soleil avec le code d'un petit triangle, en utilisant
+    une boucle imbriquée.
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    memory: '100'
+    time: '30'
+name: Exercice 3
+network_grading: false
+order: 0
+problems:
+    code:
+        options:
+            scrollbars: true
+            visual:
+                position: left
+            oneBasedIndex: true
+            media: /static/common/js/blockly/media/
+            toolboxPosition: start
+            css: true
+            trashcan: true
+            sounds: true
+            maxBlocks: '45'
+        files:
+        - turtle.js
+        - interpreter.js
+        type: blockly
+        name: ''
+        blocks_files:
+        - blocks.js
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="controls_repeat_ext">
+                <value name="TIMES">
+                  <shadow type="math_number">
+                    <field name="NUM">3</field>
+                  </shadow>
+                </value>
+                <statement name="DO">
+                  <block type="turtle_move_internal">
+                    <field name="DIR">moveForward</field>
+                    <field name="VALUE">50</field>
+                    <next>
+                      <block type="turtle_turn_internal">
+                        <field name="DIR">turnLeft</field>
+                        <field name="VALUE">120</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </xml>
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <category name="mouvements" colour="300">
+              <variables></variables>
+              <block type="turtle_move_internal">
+                <field name="DIR">moveForward</field>
+                <field name="VALUE">100</field>
+              </block>
+              <block type="turtle_turn_internal">
+                <field name="DIR">turnRight</field>
+                <field name="VALUE">90</field>
+              </block>
+              <block type="turtle_turn_internal">
+                <field name="DIR">turnLeft</field>
+                <field name="VALUE">90</field>
+              </block>
+            </category>
+              <category name="boucle" colour="105">
+              <variables></variables>
+              <block type="controls_repeat_ext">
+                <value name="TIMES">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field>
+                  </shadow>
+                </value>
+              </block>
+            </category>
+            </xml>
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        type: 0
+        visible: true
+        name: Boucles imbriquées
+        description: ''
+        id: '1'
+    '1':
+        description: Exercice faisant partie de la leçon 11
+        type: 2
+        visible: true
+        name: Lecon 11
+        id: ''
+    '2':
+        description: Faisant partie du parcours normal
+        name: Normal
+        type: 2
+        visible: false
+        id: ''
+    '3':
+        name: Facile
+        description: Faisant partie du parcours facile
+        type: 2
+        visible: false
+        id: ''
+    '4':
+        type: 2
+        description: Faisant partie du parcours challenge
+        name: Challenge
+        visible: false
+        id: ''
+weight: 1.0
