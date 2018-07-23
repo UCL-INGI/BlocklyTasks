@@ -1,5 +1,5 @@
-Welcome to JobBlockly's documentation!
-======================================
+Welcome to the documentation to create Blockly tasks on INGInious!
+==================================================================
 
 .. toctree::
    :maxdepth: 2
