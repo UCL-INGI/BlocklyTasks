@@ -120,6 +120,7 @@ If you wish to change the orientation of the character at the start, change the 
 
 If you feel like the animation speed is a little bit too quick or too slow, update the value of the ``animationSpeed`` item.
 
+
 If you wish to change the subproblem id (not visible to user, so we would advise to not do it), you will have to modify the line 107 in the file ``yourtask/student/maze.tpl.py`` to correspond the name you picked. By default, we have :
 
 .. code-block:: python
@@ -138,6 +139,13 @@ The task should now work as expected. If you wish to add or remove blocks from i
 
 .. image:: VisualBase/baseMaze3.png
     :align: center
+
+
+APP0 task
+,,,,,,,,,
+
+If you are creating a task of type *APP0*, they work as described above, except that there is no path, and walls of some sort replace them as an indication of where the character needs to go. There also is a few more blocs than in the simpler maze used in Code.org.
+
 
 Create a new collect/create task
 --------------------------------
