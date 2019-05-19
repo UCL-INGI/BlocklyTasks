@@ -1,0 +1,136 @@
+accessible: true
+author: Celine Deknop
+context: Combien y a-t-il de degrés dans un cercle ? Utilise un boucle pour compléter
+    le dessin
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    output: '2'
+    memory: '100'
+    time: '30'
+name: Exercice 4
+network_grading: false
+order: 0
+problems:
+    code:
+        options:
+            scrollbars: true
+            visual:
+                position: left
+            oneBasedIndex: true
+            media: /static/common/js/blockly/media/
+            toolboxPosition: start
+            css: true
+            trashcan: true
+            sounds: true
+            maxBlocks: '45'
+        files:
+        - turtle.js
+        - interpreter.js
+        type: blockly
+        name: ''
+        blocks_files:
+        - blocks.js
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="turtle_colour">
+                <value name="COLOUR">
+                  <block type="colour_random"></block>
+                </value>
+                <next>
+                  <block type="turtle_move_internal">
+                    <field name="DIR">moveForward</field>
+                    <field name="VALUE">100</field>
+                    <next>
+                      <block type="turtle_move_internal">
+                        <field name="DIR">moveBackward</field>
+                        <field name="VALUE">100</field>
+                        <next>
+                          <block type="turtle_turn_internal">
+                            <field name="DIR">turnRight</field>
+                            <field name="VALUE">1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </xml>
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <category name="mouvement" colour="150">
+              <variables></variables>
+              <block type="turtle_move">
+                <field name="DIR">moveForward</field>
+                <value name="VALUE">
+                  <block type="math_number">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+              <block type="turtle_turn_internal">
+                <field name="DIR">turnRight</field>
+                <field name="VALUE">90</field>
+              </block>
+              <block type="turtle_turn_internal">
+                <field name="DIR">turnLeft</field>
+                <field name="VALUE">90</field>
+              </block>
+            </category>
+               <category name="couleur" colour="0">
+              <variables></variables>
+              <block type="turtle_colour">
+                <value name="COLOUR">
+                  <block type="colour_random"></block>
+                </value>
+              </block>
+            </category>
+              <category name="boucle" colour="120">
+              <variables></variables>
+              <block type="controls_repeat">
+                <field name="TIMES">???</field>
+              </block>
+            </category>
+            </xml>
+        header: ''
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags:
+    '0':
+        type: 0
+        visible: true
+        name: Instructions avec paramètres
+        description: ''
+        id: '1'
+    '1':
+        id: '2'
+        description: ''
+        type: 0
+        visible: true
+        name: Boucles "répéter X fois"
+    '2':
+        description: Faisant partie du parcours facile
+        name: Facile
+        type: 2
+        visible: false
+        id: ''
+    '3':
+        name: Normal
+        description: Faisant partie du parcours normal
+        type: 2
+        visible: false
+        id: ''
+    '4':
+        type: 2
+        description: ''
+        name: Lecon5
+        visible: true
+        id: ''
+weight: 1.0
